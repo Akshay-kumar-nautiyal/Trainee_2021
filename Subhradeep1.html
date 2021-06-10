@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <style>
+            body {
+                text-align: center;
+            }
+      
+            h1 {
+                color: brown;
+            }
+      
+        </style>
+    </head>
+  <title>
+
+  </title>
+<body>
+    <h1>REGISTER FORM  APPLICATION</h1>
+    
+        
+        <form name="RegForm" action="/submit.php" 
+        onsubmit="return didit()" method="post">
+           
+        <strong> First Name:<br></strong>
+            <input type="text" name="firstname">
+            <br><br>
+            <strong>Last Name:<br></strong>
+            <input type="text" name="lastname">
+            <br><br>
+          
+            <strong><label for="email">
+                E-mail Address:<br></strong>
+
+                <input type="email" id="email" name="email">
+              </label><br><br>
+
+
+
+              <strong> Mobile Number:<br></strong>
+            <input type="text" name="mobileno">
+            <br><br>
+
+            <strong>DOB:<br></strong>
+            <input type="text" id="dob" onclick="getAge(dateString)" />
+            <br><br>
+
+           
+            <strong> Gender:<br></strong>
+            
+           <select>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            </select><br><br><br>
+
+
+     
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+  
+
+<script src="nmm.js"></script>
+    <p id="demo">rte</p>
+      <button type="button" onclick="myFunction()">Try it</button>
+      <button type="button" onclick="myalert()">Try xxit</button>
+     
+
+</body>
+  
+</html>
