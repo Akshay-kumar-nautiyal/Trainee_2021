@@ -7,6 +7,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="style.css">
+        <script>
+            function display(){
+            dis = window.open('' , 'NewWin','toolbar = no , status = no ,width =300 ,hieght = 200')
+            message = '<ul><li><br>First Name : </br>' + document.form.fname.value;
+            message += '<ul><li><br>Last Name : </br>' + document.form.lname.value;
+            message += '<ul><li><br> MObile : </br>' + document.form.number.value;
+            message += '<ul><li><br> Date of Birth : </br>' + document.form.datepicker.value;
+            message += '<ul><li><br> Email : </br>' + document.form.email.value;
+            message += '<ul><li><br> Gender : </br>' + document.form.gender.value + '</ul>';
+        
+            dis.document.write(message);
+        </script>
     </head>
 
     <body>
@@ -42,6 +54,7 @@
                     <button id="submit" type="submit">Registar</button>
                     <button id="clear" >clear</button>
                     <button id="reset">Reset</button>
+                    <button id="display" onclick="display();">Display</button>
                 </form>
             </div>
         </div>
