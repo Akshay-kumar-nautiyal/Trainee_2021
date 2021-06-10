@@ -1,0 +1,132 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<title>Register Aplication</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<style>  
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: pink;  
+}  
+.container {  
+    padding: 50px;  
+  background-color: lightblue;  
+}  
+  
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: orange;  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.registerbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 1;  
+}  
+</style>  
+<script>  
+function getAge() 
+{
+    var dateString = document.getElementById("dob").value;
+    if(dateString !="")
+    {
+        var today = new Date();
+        var birthDate = new Date(dateString); //format is mm.dd.yyyy
+        var age = today.getFullYear() - birthDate.getFullYear();
+
+        if(age < 18 || age > 100)
+        {
+            alert("Age "+age+" is restrict");
+        } 
+        else 
+        {
+            alert("Age "+age+" is allowed");
+        }
+    } 
+    else 
+    {
+        alert("please provide your date of birth");
+    }
+} 
+function check()
+{
+  document.getElementById('f1').innerHTML=document.myform.fname.value;
+  document.getElementById('f2').innerHTML=document.myform.lname.value;
+  document.getElementById('f3').innerHTML=document.myform.gender.value;
+  document.getElementById('f4').innerHTML=document.myform.dateof.value;
+  document.getElementById('f5').innerHTML=document.myform.email.value;
+  document.getElementById('f6').innerHTML=document.myform.phoneno.value;
+
+}
+
+
+
+</script>  
+</head>  
+<body>  
+<form name="myform">  
+  <div class="container">  
+  <center>  <h1>Registeration Form</h1> </center>  
+  <hr>  
+  <label> <b>Firstname</b></label>   
+<input type="text" name="fname" placeholder= "Firstname" size="15" required />   
+<label> <b>Lastname</b> </label>    
+<input type="text" name="lname" placeholder="Lastname" size="15"required />   
+<div>  
+<label>   
+<b>Gender</b>  
+</label><br>  
+<select name="gender">
+  <option value=Male>Male</option>
+  <option value=Female>Female</option>
+  <option value=Others>Others</option>
+</select>
+</div> 
+<label><b>Date of Birth</b></label>
+<br>
+<input type="date" id="dob" name="dateof">
+<input type="button" value="calculate Age" onclick="getAge(); return false;")
+<br>
+<br>
+<label for="email"><b>Email</b></label>  
+ <input type="text" placeholder="Enter Email" id="email" name="email" pattern="[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*" required>  
+<label>   
+<b>Phone</b>  
+</label>  
+  <input type="text" name="phoneno" id="phone" placeholder="phone no." size="10" patten="[6-9]{1}[0-9]{9}" required />
+ <input type="submit" class="registerbtn" onclick="check(); return false">  
+<button type="reset" class="registerbtn" value="reset">Reset Value</button>
+<input type="button" class="registerbtn" name="c" value="clear" />
+</form>  
+
+
+<p id="f1"></p>
+<p id="f2"></p>
+<p id="f3"></p>
+<p id="f4"></p>
+<p id="f5"></p>
+<p id="f6"></p>
+</body>
+</html>  
